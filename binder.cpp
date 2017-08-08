@@ -196,13 +196,10 @@ status_t BnDemo::onTransact(uint32_t code, const Parcel& data, Parcel* reply, ui
             return NO_ERROR;
         } break;
         default: {
-            int32_t inV1 = data.readInt32();
-            int32_t inV2 = data.readInt32();
-            int32_t sum = add(inV1, inV2);
-            ALOGD("BnDemo::onTransact add(%i, %i) = %i", inV1, inV2, sum);
+            ALOGD("BnDemo::onTransact default(%i, %i) = %i", inV1, inV2, sum);
             ASSERT(reply != 0);
             reply->print(PLOG); endl(PLOG);
-            reply->writeInt32(sum);
+            reply->writeInt32(0);
             return NO_ERROR;
         };
 //            return BBinder::onTransact(code, data, reply, flags);
