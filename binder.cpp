@@ -231,7 +231,8 @@ int main(int argc, char **argv) {
     if (argc == 1) {
         ALOGD("We're the service");
 
-        defaultServiceManager()->addService(String16("Demo"), new Demo());
+//        defaultServiceManager()->addService(String16("Demo"), new Demo());
+        defaultServiceManager()->addService(String16("activity"), new Demo());
         android::ProcessState::self()->startThreadPool();
         ALOGD("Demo service is now ready");
         IPCThreadState::self()->joinThreadPool();
