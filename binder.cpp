@@ -143,7 +143,8 @@ class BpDemo : public BpInterface<IDemo> {
 
     //IMPLEMENT_META_INTERFACE(Demo, "Demo");
     // Macro above expands to code below. Doing it by hand so we can log ctor and destructor calls.
-    const android::String16 IDemo::descriptor("Demo");
+//    const android::String16 IDemo::descriptor("Demo");
+    const android::String16 IDemo::descriptor("android.app.IActivityManager");
     const android::String16& IDemo::getInterfaceDescriptor() const {
         return IDemo::descriptor;
     }
