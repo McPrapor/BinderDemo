@@ -196,7 +196,7 @@ status_t BnDemo::onTransact(uint32_t code, const Parcel& data, Parcel* reply, ui
             return NO_ERROR;
         } break;
         default: {
-            ALOGD("BnDemo::onTransact default(%i, %i) = %i", inV1, inV2, sum);
+            ALOGD("BnDemo::onTransact default()");
             ASSERT(reply != 0);
             reply->print(PLOG); endl(PLOG);
             reply->writeInt32(0);
