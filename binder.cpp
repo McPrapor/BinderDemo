@@ -21,7 +21,7 @@
  * alert(), and add(N, 5).
  */
 
-#define LOG_TAG "binder_demo"
+#define LOG_TAG "activityman"
 
 /* For relevant code see:
     frameworks/native/{include,libs}/binder/{IInterface,Parcel}.{h,cpp}
